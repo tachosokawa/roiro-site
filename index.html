@@ -3,378 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROIRO</title>
+  <meta name="robots" content="noindex">
+  <title>ROIRO｜準備中</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root{
+      --sumi:#3B322C; --kinari:#F5F1E8; --hi:#F47A4E; --renga01:#522614;
+      --font-en:"Arvo",serif; --font-ja:"Zen Kaku Gothic New",sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      background:var(--kinari); color:var(--sumi);
+      font-family:var(--font-ja);
+      display:flex; align-items:center; justify-content:center;
+      min-height:100vh; text-align:center; padding:24px;
+    }
+    .wrap{ max-width:560px; }
+    .logo{
+      font-family:var(--font-en); font-weight:700;
+      font-size:clamp(48px,12vw,88px); letter-spacing:0.08em;
+      color:var(--sumi); line-height:1;
+    }
+    .rule{
+      width:40px; height:3px; background:var(--hi);
+      margin:28px auto; border-radius:2px;
+    }
+    .lead{
+      font-size:clamp(15px,4vw,18px); font-weight:500;
+      line-height:2; color:var(--sumi);
+    }
+    .status{
+      margin-top:32px; font-family:var(--font-en);
+      font-size:13px; letter-spacing:0.18em; font-weight:700;
+      color:var(--renga01);
+    }
+    .open{
+      margin-top:8px; font-family:var(--font-en);
+      font-size:clamp(20px,6vw,28px); letter-spacing:0.12em; font-weight:700;
+      color:var(--sumi);
+    }
+  </style>
 </head>
 <body>
-<svg width="0" height="0" class="svg-sprite" aria-hidden="true">
-  <symbol id="arrow" viewBox="0 0 18 15"><path d="M1 6.36401C0.447715 6.36401 0 6.81173 0 7.36401C0 7.9163 0.447715 8.36401 1 8.36401V7.36401V6.36401ZM17.7071 8.07112C18.0976 7.6806 18.0976 7.04743 17.7071 6.65691L11.3431 0.292946C10.9526 -0.0975785 10.3195 -0.0975785 9.92893 0.292946C9.53841 0.68347 9.53841 1.31664 9.92893 1.70716L15.5858 7.36401L9.92893 13.0209C9.53841 13.4114 9.53841 14.0446 9.92893 14.4351C10.3195 14.8256 10.9526 14.8256 11.3431 14.4351L17.7071 8.07112ZM1 7.36401V8.36401H17V7.36401V6.36401H1V7.36401Z" fill="currentColor"/></symbol>
-  
-  
-  <symbol id="arrow-ext" viewBox="0 0 17 17"><rect x="1" y="5.65674" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16.657 0.999768C16.657 0.447483 16.2093 -0.000232004 15.657 -0.000232257L6.65697 -0.000231456C6.10469 -0.000231793 5.65697 0.447484 5.65697 0.999768C5.65697 1.55205 6.10469 1.99977 6.65697 1.99977L14.657 1.99977L14.657 9.99977C14.657 10.5521 15.1047 10.9998 15.657 10.9998C16.2093 10.9998 16.657 10.5521 16.657 9.99977L16.657 0.999768ZM4.34326 12.3135L5.05037 13.0206L16.3641 1.70688L15.657 0.999768L14.9499 0.292661L3.63615 11.6064L4.34326 12.3135Z" fill="currentColor"/></symbol>
-  <symbol id="ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
-  <symbol id="bubble" viewBox="0 0 316 106"><path d="M170.5 83L158 105L145.5 83H21C9.954 83 1 74.046 1 63V21C1 9.954 9.954 1 21 1H295C306.046 1 315 9.954 315 21V63C315 74.046 306.046 83 295 83H170.5Z" fill="#fff"/><path d="M170.5 83L158 105L145.5 83H21C9.954 83 1 74.046 1 63V21C1 9.954 9.954 1 21 1H295C306.046 1 315 9.954 315 21V63C315 74.046 306.046 83 295 83H170.5Z" fill="none" stroke="#3B322C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-</svg>
-
-<!-- PC: 右側固定ナビ -->
-<nav class="side-nav" id="side-nav">
-  <div class="side-nav-logo">
-    <img src="img/ROIROlogo01.svg" alt="ROIRO">
-  </div>
-  <div class="side-nav-links">
-    <a href="about.html"       data-section="about">ABOUT</a>
-    <a href="how-to-join.html" data-section="how-to-join">HOW TO JOIN</a>
-    <a href="#access"      data-section="access">ACCESS</a>
-    <a href="#event"       data-section="event">EVENT</a>
-    <a href="#together"    data-section="together">TOGETHER WITH</a>
-    <a href="#information" data-section="information">INFORMATION</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsklfCkz8tUGo7SOtKsHogS1B_7vt6EtplDRpmhUAZSh4tpg/viewform?usp=dialog" target="_blank" rel="noopener"     data-section="contact">CONTACT</a>
-  </div>
-  <div class="side-nav-ig">
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg width="32" height="32"><use href="#ig"/></svg>
-    </a>
-  </div>
-</nav>
-
-<!-- SP: 固定ヘッダー -->
-<header class="sp-header" id="sp-header">
-  <div class="sp-header-logo">
-    <img src="img/ROIROlogo01.svg" alt="ROIRO">
-  </div>
-  <div class="sp-header-right">
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="icon-btn" aria-label="Instagram">
-      <svg width="22" height="22"><use href="#ig"/></svg>
-    </a>
-    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<!-- SP: ナビオーバーレイ -->
-<div class="sp-nav" id="sp-nav" role="dialog" aria-modal="true">
-  <div class="sp-nav-top">
-    <img src="img/ROIROlogo01.svg" alt="ROIRO">
-    <div class="sp-nav-top-right">
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="icon-btn" aria-label="Instagram">
-        <svg width="22" height="22"><use href="#ig"/></svg>
-      </a>
-      <button class="sp-close" id="close-btn" aria-label="閉じる">✕</button>
-    </div>
-  </div>
-  <nav class="sp-nav-links">
-    <a href="about.html"       class="sp-link">ABOUT</a>
-    <a href="how-to-join.html" class="sp-link">HOW TO JOIN</a>
-    <a href="#access"      class="sp-link">ACCESS</a>
-    <a href="#event"       class="sp-link">EVENT</a>
-    <a href="#together"    class="sp-link">TOGETHER WITH</a>
-    <a href="#information" class="sp-link">INFORMATION</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsklfCkz8tUGo7SOtKsHogS1B_7vt6EtplDRpmhUAZSh4tpg/viewform?usp=dialog" target="_blank" rel="noopener"     class="sp-link">CONTACT</a>
-  </nav>
-  <div class="sp-nav-footer">
-    <a href="#contact" class="sp-cta sp-link">ROIROコミュニティに参加する <span><svg width="18" height="15" aria-hidden="true"><use href="#arrow"/></svg></span></a>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero-furnace-img">
-    <img src="img/ro.jpg" alt="炉" class="furnace-photo">
-  </div>
-  <div class="hero-logo-pc">
-    <a href="/">
-      <img src="img/ROIROlogo01.svg" alt="ROIRO">
-    </a>
-  </div>
-  <div class="hero-brick" aria-hidden="true"></div>
-  <div class="hero-catch"><h1 aria-label="炉を囲んで、はじまる。"><span class="hc" style="--i:0">炉</span><span class="hc" style="--i:1">を</span><span class="hc" style="--i:2">囲</span><span class="hc" style="--i:3">ん</span><span class="hc" style="--i:4">で</span><span class="hc" style="--i:5">、</span><br><span class="hc" style="--i:6">は</span><span class="hc" style="--i:7">じ</span><span class="hc" style="--i:8">ま</span><span class="hc" style="--i:9">る</span><span class="hc" style="--i:10">。</span></h1></div>
-  <div class="hero-sub"><p>みんなでつくる<br>新しい炉の広場</p></div>
-</section>
-
-<!-- ABOUT -->
-<section class="section-about" id="about">
-  <div class="sec-inner">
-    <h2 class="section-title">ABOUT</h2>
-    <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">ROIROって？</span></div></div>
-    <div class="about-grid">
-      <div class="about-illust"><img src="img/ill_about01.svg" alt="炉を囲む人々のイラスト"></div>
-      <div>
-        <p class="about-body">2026年9月始動！<br>千葉の遊休不動産の空き地を舞台に、地域に開かれた「炉の広場（ROIRO）」を立ち上げます。</p>
-        <a href="about.html" class="btn">ROIROを知る <svg width="18" height="15" aria-hidden="true"><use href="#arrow"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 空き地から -->
-<div class="about-field">
-  <div class="about-field-overlay"></div>
-  <div class="about-field-text">
-    <h2 aria-label="空き地から、はじめる。"><span class="fc">空</span><span class="fc">き</span><span class="fc">地</span><span class="fc">か</span><span class="fc">ら</span><span class="fc">、</span><br><span class="fc">は</span><span class="fc">じ</span><span class="fc">め</span><span class="fc">る</span><span class="fc">。</span></h2>
-  </div>
-</div>
-
-<!-- 空き地テキスト -->
-<div class="about-field-desc">
-  <p>ピザ窯づくりや花壇づくりなど、何もない場所から、<br class="br-pc">みんなで少しずつ場を立ち上げていきます。<br class="br-pc">完成した場所に来てもらうのではなく、<br class="br-pc">"つくる途中"から関わってほしい。<br class="br-pc">ROIROは、そんなプロジェクトです。</p>
-</div>
-
-<!-- Ticker -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！</span>
-    <span>一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！一緒に場を育てる仲間を募集中！</span>
-  </div>
-</div>
-
-<!-- HOW TO JOIN -->
-<section class="section-how" id="how-to-join">
-  <div class="sec-inner">
-    <h2 class="section-title">HOW TO JOIN</h2>
-    <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">あなたは、どう関わる？</span></div></div>
-    <div class="how-cards">
-      <div class="how-card"><div class="how-card-img"><img src="img/ill_hiwotukauhito.svg" alt="火をつかう人"></div><h3>火をつかう人</h3><p>ピザ、パン、陶芸、コーヒーなど、炉や火を使った活動をしたい方。</p></div>
-      <div class="how-card"><div class="how-card-img"><img src="img/ill_tsukuruhito.svg" alt="場を一緒につくる人"></div><h3>場を一緒につくる人</h3><p>DIY、植物、施工、運営サポートなど、場づくりそのものに関わりたい方。</p></div>
-      <div class="how-card"><div class="how-card-img"><img src="img/ill_moriageru.svg" alt="一緒に盛りあげる人"></div><h3>一緒に盛りあげる人</h3><p>地域企業、飲食店、ブランド、メディアなど、ROIROと一緒に新しい取り組みをしたい方。</p></div>
-      <div class="how-card"><div class="how-card-img"><img src="img/ill_mimamoru.svg" alt="見守る人"></div><h3>見守る人</h3><p>まずはInstagramから。ROIROが育っていく過程を発信していきます。</p></div>
-    </div>
-    <p class="how-desc">ROIROでは、一緒につくりあげる仲間・自治体・企業を募集中です。<br>まだ何もないこの場所を一緒に楽しみながら育ててくれる方をお待ちしています。</p>
-    <div class="btn-center mt-64"><a href="how-to-join.html" class="btn">一緒に育てる <svg width="18" height="15" aria-hidden="true"><use href="#arrow"/></svg></a></div>
-  </div>
-</section>
-
-<!-- ACCESS -->
-<section class="section-access" id="access">
-  <div class="sec-inner">
-    <h2 class="section-title">ACCESS</h2>
-    <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">ROIROへの行き方</span></div></div>
-    <div class="access-grid">
-      <div>
-        <div class="access-map">
-          <iframe
-            src="https://maps.google.com/maps?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%8D%83%E8%91%89%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E8%98%87%E6%88%914%E4%B8%81%E7%9B%AE10-1&hl=ja&z=16&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="ROIRO 所在地マップ"></iframe>
-        </div>
-        <a href="https://maps.google.com/?q=260-0822+千葉県千葉市中央区蘇我4丁目10-1" target="_blank" rel="noopener" class="access-googlemap-link">GOOGLE MAP <svg width="17" height="17" aria-hidden="true"><use href="#arrow-ext"/></svg></a>
-      </div>
-      <div>
-      <div class="access-info">
-        <div class="info-block">
-          <h3>ADDRESS</h3>
-          <p>260-0822 千葉県千葉市中央区蘇我4丁目10-1</p>
-        </div>
-        <div class="info-block">
-          <h3>TRAIN</h3>
-          <p>JR各線「蘇我駅」から徒歩 約11分<br>京成千原線「千葉寺駅」から徒歩 約15分</p>
-        </div>
-        <div class="info-block">
-          <h3>BUS</h3>
-          <p>JR「蘇我駅」東口バスターミナルよりご乗車ください。</p>
-          <p>■「蘇我中下」バス停下車 徒歩 約1分</p>
-          <ul class="access-list">
-            <li>2番のりば：小湊鐵道バス</li>
-            <li>「千葉駅 行き」または「明徳学園 行き」</li>
-            <li>乗車時間： 約3〜5分</li>
-          </ul>
-          <p>■「白旗局前」バス停下車 徒歩2分</p>
-          <ul class="access-list">
-            <li>2番のりば：小湊鐵道バス 「大巌寺（淑徳大学）行き」</li>
-            <li>3番のりば：千葉中央バス 「鎌取駅 行き」</li>
-            <li>乗車時間： 約5〜7分</li>
-          </ul>
-        </div>
-        <div class="info-block">
-          <h3>CAR</h3>
-          <p>敷地内に駐車場（約15台）がございます。<br>満車の場合は近隣のコインパーキングをご利用ください。</p>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EVENT -->
-<section class="section-event" id="event">
-  <div class="sec-inner">
-    <h2 class="section-title">EVENT</h2>
-    <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">少しずつ、火が灯っていく。</span></div></div>
-    <div class="event-cards">
-      <div class="event-card"><div class="event-card-img">写真（後で追加）</div><div class="event-card-body"><span class="event-date">2026/07/01(水)</span><h3>みんなでピザ窯をつくる会</h3><p class="event-tags">#イベント #体験 #マーケット</p><a href="#" class="event-more">もっと見る<svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></a></div></div>
-      <div class="event-card"><div class="event-card-img">写真（後で追加）</div><div class="event-card-body"><span class="event-date">2026/07/01(水)</span><h3>みんなでピザ窯をつくる会</h3><p class="event-tags">#イベント #体験 #マーケット</p><a href="#" class="event-more">もっと見る<svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></a></div></div>
-      <div class="event-card"><div class="event-card-img">写真（後で追加）</div><div class="event-card-body"><span class="event-date">2026/07/01(水)</span><h3>みんなでピザ窯をつくる会</h3><p class="event-tags">#イベント #体験 #マーケット</p><a href="#" class="event-more">もっと見る<svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></a></div></div>
-    </div>
-    <div class="btn-center mt-64">
-      <a href="/event" class="btn btn-dark">イベント一覧 <svg width="18" height="15" aria-hidden="true"><use href="#arrow"/></svg></a>
-    </div>
-  </div>
-</section>
-<section class="section-together" id="together">
-  <div class="sec-inner">
-    <h2 class="section-title">TOGETHER WITH</h2>
-    <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">一緒に場を育てる人たち</span></div></div>
-    <div class="together-cards">
-      <div class="together-card">
-        <div class="together-card-img">写真①</div>
-        <p class="together-card-catchcopy">仲間とピザ窯をつくりあげる</p>
-        <p class="together-card-type">ピザレストラン</p>
-        <p class="together-card-name">蘇我 太郎</p>
-        <p class="together-card-tag">#FOOD</p>
-      </div>
-      <div class="together-card">
-        <div class="together-card-img">写真②</div>
-        <p class="together-card-catchcopy">蘇我の魅力をつたえる</p>
-        <p class="together-card-type">一般社団法人</p>
-        <p class="together-card-name">蘇我 太郎</p>
-        <p class="together-card-tag">#CULTURE</p>
-      </div>
-      <div class="together-card">
-        <div class="together-card-img">写真③</div>
-        <p class="together-card-catchcopy">マルシェを開催する</p>
-        <p class="together-card-type">雑貨店</p>
-        <p class="together-card-name">蘇我 太郎</p>
-        <p class="together-card-tag">#EVENT</p>
-      </div>
-      <div class="together-card">
-        <div class="together-card-img">写真④</div>
-        <p class="together-card-catchcopy">ROIROを花で埋め尽くしたい</p>
-        <p class="together-card-type">アーティスト</p>
-        <p class="together-card-name">蘇我 太郎</p>
-        <p class="together-card-tag">#ART</p>
-      </div>
-    </div>
-    <div class="btn-center mt-48">
-      <a href="/together" class="btn">もっと見る <svg width="18" height="15" aria-hidden="true"><use href="#arrow"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- INFORMATION -->
-<section class="section-information" id="information">
-  <div class="sec-inner">
-    <h2 class="section-title">INFORMATION</h2>
-    <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">お知らせ・最新情報</span></div></div>
-    <div class="info-cards">
-      <div class="info-card">
-        <p class="info-card-date">2026/07/01(水)</p>
-        <p class="info-card-text">ROIROウェブサイトがオープンしました。</p>
-        <div class="info-card-arrow"><svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></div>
-      </div>
-      <div class="info-card">
-        <p class="info-card-date">2026/07/01(水)</p>
-        <p class="info-card-text">マルシェを開催します。</p>
-        <div class="info-card-arrow"><svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></div>
-      </div>
-      <div class="info-card">
-        <p class="info-card-date">2026/07/01(水)</p>
-        <p class="info-card-text">ワークショップを開催します。</p>
-        <div class="info-card-arrow"><svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></div>
-      </div>
-    </div>
-    <div class="btn-center mt-48">
-      <a href="/information" class="btn">お知らせ一覧 <svg width="18" height="15" aria-hidden="true"><use href="#arrow"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section-contact" id="contact">
-  <div class="sec-inner">
-    <h2 class="section-title">CONTACT</h2>
-    <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">お問い合わせ</span></div></div>
-    <p class="contact-lead">出店したい！協力したい！一緒につくりたい！取材したい！<br class="br-pc">話を聞いてみたい！など、お気軽にご連絡ください。</p>
-    <div class="contact-cards">
-      <div class="contact-card">
-        <p class="contact-card-title">ROIROと一緒に自治体様や企業様を募集中です。</p>
-        <p class="contact-card-body">単なる場所の貸し借りではなく、この場所の「一歩目」から一緒に歩み、伴走してくれる、近隣の飲食店さまや企業パートナーを募集します。</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsklfCkz8tUGo7SOtKsHogS1B_7vt6EtplDRpmhUAZSh4tpg/viewform?usp=dialog" target="_blank" rel="noopener" class="contact-card-link">パートナー募集 <svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></a>
-      </div>
-      <div class="contact-card">
-        <p class="contact-card-title">ROIROを一緒につくりあげる仲間を募集中です。</p>
-        <p class="contact-card-body">ROIROでは、地域・ものづくり・食・体験など、さまざまな領域を横断しながら、この場所を一緒に育てていく仲間を募集しています。</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsklfCkz8tUGo7SOtKsHogS1B_7vt6EtplDRpmhUAZSh4tpg/viewform?usp=dialog" target="_blank" rel="noopener" class="contact-card-link">一緒に育てる仲間募集 <svg class="ico-ur" width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMMUNITY -->
-<section class="section-community">
-  <div class="community-inner">
-    <div class="community-illust"><img src="img/ill_community.svg" alt="ROIROコミュニティのイラスト"></div>
-    <div class="community-body">
-      <h2>ROIROコミュニティに参加する</h2>
-      <p>ROIROは、地域の人や参加者とともにつくっていくプロジェクトです。<br>まだ何もない場所が、少しずつかたちになっていく過程を一緒に楽しみませんか。<br>登録は無料です。</p>
-      <a href="#" class="btn btn-dark">仲間になる <svg width="18" height="15" aria-hidden="true"><use href="#arrow"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- INSTAGRAM -->
-<section class="section-instagram" id="instagram">
-  <div class="instagram-inner">
-    <div class="instagram-left">
-      <h2 class="section-title">INSTAGRAM</h2>
-      <div class="speech-bubble"><div class="speech-bubble-wrap"><svg width="316" height="106" viewBox="0 0 316 106"><use href="#bubble"/></svg><span class="speech-bubble-text">最新の活動の様子</span></div></div>
-      <div class="instagram-handle">
-        <span class="instagram-handle-label">Follow ROIRO on Instagram</span>
-        <span class="instagram-handle-name">@roiro</span>
-      </div>
-      <a href="https://www.instagram.com/roiro" target="_blank" rel="noopener" class="insta-btn">インスタグラムを見る <svg width="22" height="22"><use href="#ig"/></svg></a>
-    </div>
-    <div class="instagram-illust"><img src="img/ill_join.svg" alt="ROIROに参加するイラスト"></div>
-  </div>
-</section>
-
-<!-- SPONSOR TICKER -->
-<div class="sponsor-ticker" aria-hidden="true">
-  <div class="sponsor-ticker-track">
-    <img src="img/logo_storyandco.svg" alt="STORY &amp; Co."><img src="img/logo_yamasaki.svg" alt="株式会社ヤマサキ">
-    <img src="img/logo_storyandco.svg" alt="STORY &amp; Co."><img src="img/logo_yamasaki.svg" alt="株式会社ヤマサキ">
-    <img src="img/logo_storyandco.svg" alt="STORY &amp; Co."><img src="img/logo_yamasaki.svg" alt="株式会社ヤマサキ">
-    <img src="img/logo_storyandco.svg" alt="STORY &amp; Co."><img src="img/logo_yamasaki.svg" alt="株式会社ヤマサキ">
-    <img src="img/logo_storyandco.svg" alt="STORY &amp; Co."><img src="img/logo_yamasaki.svg" alt="株式会社ヤマサキ">
-    <img src="img/logo_storyandco.svg" alt="STORY &amp; Co."><img src="img/logo_yamasaki.svg" alt="株式会社ヤマサキ">
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-brick"><img src="img/brick02.svg" alt=""></div>
-  <div class="footer-inner">
-    <div class="footer-logo"><img src="img/ROIROlogo01.svg" alt="ROIRO"></div>
-    <nav class="footer-nav">
-      <a href="about.html">ABOUT</a>
-      <a href="how-to-join.html">HOW TO JOIN</a>
-      <a href="#access">ACCESS</a>
-      <a href="#event">EVENT</a>
-      <a href="#together">TOGETHER WITH</a>
-      <a href="#information">INFORMATION</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsklfCkz8tUGo7SOtKsHogS1B_7vt6EtplDRpmhUAZSh4tpg/viewform?usp=dialog" target="_blank" rel="noopener">CONTACT</a>
-    </nav>
-    <div class="footer-right">
-      <a href="#contact" class="footer-link">コミュニティの仲間になる <svg class="ico-ur" width="12" height="12" aria-hidden="true"><use href="#arrow"/></svg></a>
-      <div class="footer-address">
-        <strong>ROIRO（ロイロ）</strong>
-        260-0822 千葉県千葉市中央区蘇我4丁目10-1
-      </div>
-      <a href="https://maps.google.com" target="_blank" class="footer-map-link">GOOGLE MAP <svg width="14" height="14" aria-hidden="true"><use href="#arrow-ext"/></svg></a>
-      <a href="https://www.instagram.com/roiro" target="_blank" rel="noopener" class="footer-ig" aria-label="Instagram">
-        <svg width="28" height="28"><use href="#ig"/></svg>
-      </a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2026 ROIRO All Rights Reserved.</p>
-    <a href="#top" class="footer-pagetop">PAGE TOP <svg class="ico-up" width="11" height="13" aria-hidden="true"><use href="#arrow"/></svg></a>
-  </div>
-</footer>
-
-<script src="js/common.js" defer></script>
-<script src="js/index.js" defer></script>
+  <main class="wrap">
+    <div class="logo">ROIRO</div>
+    <div class="rule"></div>
+    <p class="lead">炉を囲んで、はじまる。<br>みんなでつくる、新しい炉の広場。</p>
+    <p class="status">COMING SOON</p>
+    <p class="open">2026.09 OPEN</p>
+  </main>
 </body>
 </html>
