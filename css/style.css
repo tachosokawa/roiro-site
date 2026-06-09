@@ -221,10 +221,13 @@
     .ticker { overflow: hidden; background: var(--hikari); padding: 2px 0; }
     .ticker-track {
       display: inline-flex; gap: 0; white-space: nowrap;
-      animation: scroll-x 80s linear infinite;
+      animation: scroll-x 120s linear infinite;
     }
     .ticker-track span { font-family: var(--font-ja); font-size: 64px; font-weight: 500; color: #ffffff; letter-spacing: 0.1em; }
     @keyframes scroll-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    /* 流れるテキスト：ホバーで一時停止（下線なし） */
+    .ticker a { text-decoration: none; cursor: pointer; }
+    .ticker:hover .ticker-track { animation-play-state: paused; }
 
     /* ════ HOW TO JOIN ════ */
     .section-how { padding: 80px var(--sec-pad-x); background: var(--kinari); }
@@ -332,6 +335,8 @@
     /* ════ CONTACT ════ */
     .section-contact { position: relative; padding: 80px var(--sec-pad-x); background: var(--hai); border-radius: 50% 50% 0 0 / 450px 450px 0 0; }
     .section-contact::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 470px; background: #fff; z-index: -1; }
+    /* 公開準備中の暫定：ACCESSとCONTACTの間の白余白 */
+    .contact-gap-white { background: #fff; height: clamp(48px, 8vw, 96px); }
     .section-contact .section-title { font-size: 64px; }
     .contact-lead { text-align: center; font-size: 22px; font-weight: 500; line-height: 2; color: var(--sumi); margin-bottom: 48px; }
     .contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -381,7 +386,7 @@
 
     /* ════ FOOTER ════ */
     .footer { background: var(--sumi); padding: 0; position: relative; }
-    .footer-brick { width: 100%; line-height: 0; overflow: hidden; background: #ffffff; }
+    .footer-brick { width: 100%; line-height: 0; overflow: hidden; background: #ffffff; padding-top: clamp(40px, 6vw, 72px); }
     .footer-brick img { width: 100%; height: auto; display: block; }
     .footer-inner { padding: 56px 60px 32px; display: grid; grid-template-columns: 200px 1fr 1fr; gap: 48px; }
     .footer-logo img { height: 48px; width: auto; filter: brightness(0) invert(0.85); }
@@ -829,7 +834,7 @@
     .join-row-body p { font-family: var(--font-ja); font-size: 16px; font-weight: 500; line-height: 1.9; color: var(--sumi); }
 
     /* ── 募集本文＋ボタン ── */
-    .htj-desc { text-align: left; font-family: var(--font-ja); font-size: 18px; font-weight: 500; line-height: 2.1; color: var(--sumi); max-width: 760px; margin: 0 auto 48px; letter-spacing: 0.03em; }
+    .htj-desc { text-align: center; font-family: var(--font-ja); font-size: 18px; font-weight: 500; line-height: 2.1; color: var(--sumi); max-width: 760px; margin: 0 auto 48px; letter-spacing: 0.03em; }
     .htj-btns { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
 
     /* ── HOW TO JOINページ：タブレット ── */
@@ -855,7 +860,7 @@
       .join-row:nth-child(2) .join-row-illust img { max-height: 108px; }
       .join-row-body h3 { font-size: 19px; margin-bottom: 10px; }
       .join-row-body p { font-size: 14px; line-height: 1.85; text-align: left; }
-      .htj-desc { font-size: 16px; line-height: 2; }
+      .htj-desc { font-size: 16px; line-height: 2; text-align: left; }
       .htj-btns { gap: 14px; }
     }
 
