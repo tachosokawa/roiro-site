@@ -1,0 +1,15 @@
+# macOS が自動生成するファイル
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# エディタ設定
+.vscode/
+.idea/
+
+# ログ・一時ファイル
+*.log
+*.tmp
+
+# Vercel
+.vercel/
