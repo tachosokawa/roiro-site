@@ -56,7 +56,7 @@
   document.querySelectorAll(".how-cards, .event-cards, .together-cards").forEach((track) => {
     const originals = Array.from(track.children);
     const N = originals.length;
-    let timer = null, io = null, paused = false, resumeTimer = null, clones = [];
+    let timer = null, io = null, paused = false, resumeTimer = null, clones = [], normTimer = null;
 
     const offsetOf = (el) =>
       el.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
@@ -115,19 +115,25 @@
 
     function advance() {
       if (paused || !clones.length) return;
-      normalize();
       const idx = centeredIndex();
       const next = track.children[idx + 1] || track.children[idx];
+      // 常に1枚分だけ前方向（右）へスムーズスクロール
       track.scrollTo({ left: centerTarget(next), behavior: "smooth" });
+      // 送り終えてアイドルになった後に、必要なら瞬間移動で正規化する。
+      // （スムーズスクロールと瞬間移動を同じ処理でまとめると iOS が
+      //   開始位置を取り違えて左へ巻き戻すため、時間を分ける）
+      clearTimeout(normTimer);
+      normTimer = setTimeout(normalize, 800);
     }
 
     function start() { addClones(); if (!timer) timer = setInterval(advance, INTERVAL); }
-    function stop()  { if (timer) { clearInterval(timer); timer = null; } }
+    function stop()  { if (timer) { clearInterval(timer); timer = null; } clearTimeout(normTimer); }
 
     // 手動操作中は一時停止し、一定時間後に再開
     function pause() {
       paused = true;
       clearTimeout(resumeTimer);
+      clearTimeout(normTimer);
       resumeTimer = setTimeout(() => { paused = false; }, RESUME);
     }
     ["pointerdown", "touchstart", "wheel"].forEach((ev) =>
