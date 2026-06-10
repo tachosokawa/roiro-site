@@ -100,8 +100,17 @@
     function normalize() {
       const P = offsetOf(track.children[N]) - offsetOf(track.children[0]); // 1セット分の距離
       const idx = centeredIndex();
-      if (idx >= 2 * N) track.scrollLeft -= P;
-      else if (idx < N) track.scrollLeft += P;
+      let delta = 0;
+      if (idx >= 2 * N) delta = -P;
+      else if (idx < N) delta = P;
+      if (!delta) return;
+      // iOS Safari は scroll-snap が有効だと瞬間移動をアニメーション付きの巻き戻しとして
+      // 処理してしまう（4→1に戻って見える）。瞬間移動の間だけスナップを切る。
+      const prevSnap = track.style.scrollSnapType;
+      track.style.scrollSnapType = "none";
+      track.scrollLeft += delta;   // 同じ見た目のまま位置だけ移動（継ぎ目なし）
+      void track.offsetWidth;      // 位置の反映を強制してから
+      track.style.scrollSnapType = prevSnap; // スナップを元に戻す
     }
 
     function advance() {
