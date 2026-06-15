@@ -188,7 +188,8 @@
     /* 空き地から */
     .about-field {
       position: relative; overflow: hidden;
-      background: var(--kusa) url('../img/land.jpg') center center / cover no-repeat;
+      background: var(--kusa) url('../img/land.jpg') center center / cover no-repeat; /* 非対応ブラウザ向けフォールバック */
+      background-image: image-set(url('../img/land.webp') type('image/webp'), url('../img/land.jpg') type('image/jpeg'));
       height: 520px;
       display: flex; align-items: center; justify-content: center;
     }
