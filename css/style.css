@@ -387,7 +387,7 @@
 
     /* ════ FOOTER ════ */
     .footer { background: var(--sumi); padding: 0; position: relative; }
-    .footer-brick { width: 100%; line-height: 0; overflow: hidden; background: #ffffff; padding-top: clamp(40px, 6vw, 72px); }
+    .footer-brick { width: 100%; line-height: 0; overflow: hidden; background: var(--kinari); padding-top: clamp(40px, 6vw, 72px); }
     .footer-brick img { width: 100%; height: auto; display: block; }
     .footer-inner { padding: 56px 60px 32px; display: grid; grid-template-columns: 200px 1fr 1fr; gap: 48px; }
     .footer-logo img { height: 48px; width: auto; filter: brightness(0) invert(0.85); }
