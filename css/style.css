@@ -179,8 +179,10 @@
     }
     .hero-brick {
       position: absolute; bottom: 0; left: 0; transform: none;
-      z-index: 3; width: 100vw; height: 110px;
-      background: url('../img/brick01.svg') repeat-x left bottom / auto 110px;
+      z-index: 3; width: 100vw;
+      /* PCは下のレンガをアーチ枠より少し小さめに（炉連動より控えめの約13vh） */
+      height: clamp(84px, 13vh, 150px);
+      background: url('../img/brick01.svg') repeat-x left bottom / auto clamp(84px, 13vh, 150px);
     }
 
     /* ════ ABOUT ════ */
@@ -457,6 +459,8 @@
       .hero-catch { right: 48px; }
       .hero-sub { left: 40px; top: auto; bottom: 140px; }
       .hero-furnace { max-width: 651px; max-height: 643px; }
+      /* 炉の最大高643pxに合わせてレンガ帯の上限も調整 */
+      .hero-brick { height: min(15.7vh, 115px); background-size: auto min(15.7vh, 115px); }
 
       /* 本文フォントを中間サイズに */
       .about-body, .about-field-desc p, .how-desc, .contact-lead { font-size: 19px; }
@@ -508,6 +512,8 @@
         width: 84vw; aspect-ratio: 651 / 683;
         max-width: 348px; max-height: 62svh;
       }
+      /* スマホは炉が幅基準(84vw)なのでレンガ帯も幅基準で連動：84vw×683/651×122/683≒15.7vw */
+      .hero-brick { height: clamp(44px, 15.7vw, 66px); background-size: auto clamp(44px, 15.7vw, 66px); }
       .hero-catch { right: 16px; top: 22%; }
       .hero-catch h1 { line-height: 1.4; font-size: 34px; }
       .hero-sub { left: 20px; top: 108px; bottom: auto; }
