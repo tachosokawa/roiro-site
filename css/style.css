@@ -142,12 +142,20 @@
       position: relative; width: 100%; height: 100vh; min-height: 640px;
       background: var(--kinari); overflow: hidden;
     }
-    .hero-furnace-img {
+    .hero-furnace {
       position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
       z-index: 1; height: 88vh; max-height: 980px;
-      aspect-ratio: 560 / 680; width: auto; max-width: 56vw;
-      border-radius: 500px 500px 0 0; overflow: hidden;
-      border: 2px solid #351E1C;
+      aspect-ratio: 651 / 680; width: auto; max-width: 65vw;
+    }
+    /* 写真：レンガ枠の内側開口にぴったりはめ込む（枠の厚み≒6.95%/上6.69%） */
+    .hero-furnace-img {
+      position: absolute; top: 6.69%; left: 6.95%; right: 6.95%; bottom: 0;
+      z-index: 1; border-radius: 999px 999px 0 0; overflow: hidden;
+    }
+    /* レンガのアーチ枠：写真の上に重ねる */
+    .hero-furnace-frame {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      z-index: 2; pointer-events: none; display: block;
     }
     .furnace-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .hero-logo-pc {
@@ -448,7 +456,7 @@
       /* HERO */
       .hero-catch { right: 48px; }
       .hero-sub { left: 40px; top: auto; bottom: 140px; }
-      .hero-furnace-img { max-width: 560px; max-height: 600px; }
+      .hero-furnace { max-width: 651px; max-height: 643px; }
 
       /* 本文フォントを中間サイズに */
       .about-body, .about-field-desc p, .how-desc, .contact-lead { font-size: 19px; }
@@ -495,11 +503,10 @@
 
       /* ── HERO ── */
       .hero { height: calc(100svh - 73px); min-height: 560px; }
-      .hero-furnace-img {
-        bottom: 40px;
-        width: 72vw; height: auto; aspect-ratio: 480 / 680;
-        max-width: 300px; max-height: 58svh;
-        border-radius: 150px 150px 0 0;
+      .hero-furnace {
+        bottom: 40px; height: auto;
+        width: 84vw; aspect-ratio: 651 / 680;
+        max-width: 348px; max-height: 62svh;
       }
       .hero-catch { right: 16px; top: 22%; }
       .hero-catch h1 { line-height: 1.4; font-size: 34px; }
@@ -640,7 +647,7 @@
     @media (prefers-reduced-motion: no-preference) {
       .hero-logo-pc,
       .hero-sub,
-      .hero-furnace-img,
+      .hero-furnace,
       .hero-brick {
         opacity: 0;
         animation-duration: 0.9s;
@@ -666,7 +673,7 @@
         animation-delay: 1.15s;
       }
       /* 4. 炉：下からせり上がり（既存の translateX(-50%) を保持） */
-      .hero-furnace-img {
+      .hero-furnace {
         animation:
           heroFurnaceIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) 1.55s both,
           furnaceSettle 1.15s linear 2.8s 1 forwards;
