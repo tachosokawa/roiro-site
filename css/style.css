@@ -145,7 +145,7 @@
     .hero-furnace {
       position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
       z-index: 1; height: 88vh; max-height: 980px;
-      aspect-ratio: 651 / 680; width: auto; max-width: 65vw;
+      aspect-ratio: 651 / 683; width: auto; max-width: 65vw;
     }
     /* 写真：レンガ枠の内側開口より少し大きくし、縁を枠の下に潜り込ませる（隙間防止） */
     .hero-furnace-img {
@@ -505,7 +505,7 @@
       .hero { height: calc(100svh - 73px); min-height: 560px; }
       .hero-furnace {
         bottom: 40px; height: auto;
-        width: 84vw; aspect-ratio: 651 / 680;
+        width: 84vw; aspect-ratio: 651 / 683;
         max-width: 348px; max-height: 62svh;
       }
       .hero-catch { right: 16px; top: 22%; }
