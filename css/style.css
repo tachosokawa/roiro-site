@@ -147,9 +147,9 @@
       z-index: 1; height: 88vh; max-height: 980px;
       aspect-ratio: 651 / 680; width: auto; max-width: 65vw;
     }
-    /* 写真：レンガ枠の内側開口にぴったりはめ込む（枠の厚み≒6.95%/上6.69%） */
+    /* 写真：レンガ枠の内側開口より少し大きくし、縁を枠の下に潜り込ませる（隙間防止） */
     .hero-furnace-img {
-      position: absolute; top: 6.69%; left: 6.95%; right: 6.95%; bottom: 0;
+      position: absolute; top: 5%; left: 5.2%; right: 5.2%; bottom: 0;
       z-index: 1; border-radius: 999px 999px 0 0; overflow: hidden;
     }
     /* レンガのアーチ枠：写真の上に重ねる */
