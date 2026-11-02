@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/sign",
+      "destination": "/?utm_source=signboard&utm_medium=qr&utm_campaign=roiro_signboard",
+      "permanent": false
+    }
+  ]
+}
